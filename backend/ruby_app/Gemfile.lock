@@ -1,0 +1,11 @@
+GEM
+  specs:
+
+PLATFORMS
+  aarch64-linux
+  x86_64-linux
+
+DEPENDENCIES
+
+BUNDLED WITH
+   2.2.33

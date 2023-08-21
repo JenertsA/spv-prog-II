@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  ruby-app:
+    container_name: spv-ruby-app
+    build:
+      context: .
+      dockerfile: ruby_app/Dockerfile
+    ports:
+      - 4000:4000
+    volumes:
+      - ./ruby_app:/app
+    stdin_open: true
+    tty: true

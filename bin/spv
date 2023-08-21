@@ -1,0 +1,19 @@
+#!/bin/sh
+
+case $1 in
+up)
+  docker-compose -f backend/docker-compose.yaml up
+  break
+  ;;
+down)
+  docker-compose -f backend/docker-compose.yaml down
+  break
+  ;;
+console)
+  docker exec -it spv-ruby-app tmux -CC attach-session -t development-session
+  break
+  ;;
+*)
+  echo "Command not found"
+  ;;
+esac
