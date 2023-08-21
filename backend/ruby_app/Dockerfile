@@ -1,4 +1,4 @@
-FROM ruby:3.0
+FROM ruby:3.2.0
 
 RUN apt update && apt install --no-install-recommends -y tmux
 
