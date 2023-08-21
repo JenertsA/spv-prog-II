@@ -8,6 +8,8 @@ COPY ruby_app/Gemfile Gemfile
 COPY ruby_app/Gemfile.lock Gemfile.lock
 
 ENV BUNDLE_PATH /bundled_gems
+
+RUN bundle update --bundler
 RUN bundle install
 
 ENTRYPOINT ["./docker-entrypoint.dev.sh"]
