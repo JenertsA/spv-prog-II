@@ -10,7 +10,7 @@ down)
   break
   ;;
 console)
-  docker exec -it spv-ruby-app tmux attach-session -t development-session
+  docker exec -it spv-ruby-app bash
   break
   ;;
 *)
