@@ -9,6 +9,6 @@ services:
     ports:
       - 4000:4000
     volumes:
-      - ./ruby_app:/app
+      - ./ruby_app:/ruby
     stdin_open: true
     tty: true
