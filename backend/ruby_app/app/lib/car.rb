@@ -6,11 +6,8 @@ class Car
     @year = year
   end
 
-  attr_reader :manufacturer, :model, :color, :year
+  attr_reader :manufacturer, :model, :year
+  attr_accessor :color
 
-  def color=(new_color)
-    @color = new_color
-  end
-  
 end
 
