@@ -8,5 +8,9 @@ class Car
 
   attr_reader :manufacturer, :model, :color, :year
 
+  def color=(new_color)
+    @color = new_color
+  end
+  
 end
 
