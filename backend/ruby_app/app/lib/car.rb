@@ -9,5 +9,8 @@ class Car
   attr_reader :manufacturer, :model, :year
   attr_accessor :color
 
+  def get_age
+    Time.now.year - year
+  end
 end
 
