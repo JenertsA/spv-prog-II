@@ -5,4 +5,21 @@ class Car
     @color = color
     @year = year
   end
+
+  def manufacturer
+   @manufacturer
+  end
+
+  def model
+    @model
+  end
+
+  def color
+    @color
+  end
+
+  def year
+    @year
+  end
 end
+
