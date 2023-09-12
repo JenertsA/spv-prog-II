@@ -2,7 +2,11 @@ FROM ruby:3.2.0
 
 RUN apt update && apt install --no-install-recommends -y
 
-WORKDIR /ruby/app
+WORKDIR /root
+
+RUN echo "Dir[\"/ruby/app/**/*.rb\"].each {|file| require file }" >> .irbrc
+
+WORKDIR ../ruby/app
 
 COPY ruby_app/Gemfile Gemfile
 COPY ruby_app/Gemfile.lock Gemfile.lock
