@@ -12,3 +12,17 @@ services:
       - ./ruby_app:/ruby
     stdin_open: true
     tty: true
+  db:
+    container_name: spv-db
+    image: postgres:14.3
+    environment:
+      - POSTGRES_USER=spv_ruby
+      - POSTGRES_PASSWORD=spv-dev-password
+    ports:
+      - 5432:5432
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+volumes:
+  dbdata:
+    name: spv_dbdata
